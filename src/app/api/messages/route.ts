@@ -20,9 +20,7 @@ export const POST = async (request: NextRequest) => {
   const body = await request.json();
   const { username, password } = body;
 
-  const user = DB.users.find(
-    (user) => user.username === username && user.password === password
-  );
+  
   // return NextResponse.json(
   //   {
   //     ok: false,
